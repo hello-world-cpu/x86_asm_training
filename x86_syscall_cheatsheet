@@ -1,0 +1,35 @@
+https://stackoverflow.com/questions/9130349/how-many-registers-are-there-in-8086-8088/9130829#9130829
+https://www.tutorialspoint.com/assembly_programming/assembly_registers.htm
+
+DATA REGISTERS:
+
+EAX:
+1: sys_exit system call
+3: sys_read system call
+4: sys_write system call
+
+EBX:
+n: exit status is n (0 means no error)
+1: stdout file descriptor
+2 (to check) stdin file descriptor (or stderr?)
+
+ECX:
+message (bytes to write)
+
+EDX:
+number of bytes to write (len equ $ - msg)
+
+POINTER REGISTERS
+
+EIP = instruction pointer
+ESP = stack pointer
+EBP = stack pointer (base pointer) used to backup ESP in functions
+
+INDEX REGISTERS
+
+ESI = source index
+EDI = destination index
+
+int 0x80: perform system call
+
+ld -V to see the supported emulations
