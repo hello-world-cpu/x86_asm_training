@@ -11,10 +11,10 @@ EAX:
 EBX:
 n: exit status is n (0 means no error)
 1: stdout file descriptor
-2 (to check) stdin file descriptor (or stderr?)
+2: stdin file descriptor (or stderr?)
 
 ECX:
-message (bytes to write)
+message (bytes to write) (address of the first byte)
 
 EDX:
 number of bytes to write (len equ $ - msg)
@@ -23,7 +23,7 @@ POINTER REGISTERS
 
 EIP = instruction pointer
 ESP = stack pointer
-EBP = stack pointer (base pointer) used to backup ESP in functions
+EBP = base pointer (used to backup ESP in functions)
 
 INDEX REGISTERS
 
@@ -33,3 +33,9 @@ EDI = destination index
 int 0x80: perform system call
 
 ld -V to see the supported emulations
+
+sub reg, '0' to convert from ascii to decimal value
+add reg, '0' to convert from decimal value to ascii
+
+call func = push eip   then   jmp func
+ret = pop register   then   jmp register

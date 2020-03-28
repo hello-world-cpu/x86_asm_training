@@ -1,0 +1,7 @@
+total 20
+-rw-rw-r-- 1 remi remi  231 févr. 25 22:34 makefile
+-rw-rw-r-- 1 remi remi    0 mars   5 19:37 more
+-rw-rw-r-- 1 remi remi   19 févr. 16 00:33 README.md
+drwxrwxr-x 2 remi remi 4096 févr. 26 20:37 saved
+-rw-rw-r-- 1 remi remi  298 févr. 26 03:43 training.asm
+-rw-rw-r-- 1 remi remi  926 févr. 26 01:15 x86_syscall_cheatsheet
